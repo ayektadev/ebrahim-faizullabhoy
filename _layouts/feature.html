@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} · Ebrahim Faizullabhoy</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">
+<meta property="og:description" content="{{ page.description }}">{% endif %}
+<meta property="og:title" content="{{ page.title }}">
+{% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/feature.css' | relative_url }}">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="mark" href="{{ '/' | relative_url }}">Ebrahim Faizullabhoy</a>
+    <ul>
+      <li><a href="{{ '/#writing' | relative_url }}">Writing</a></li>
+      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="feature">
+  <header class="feature-head">
+    {% if page.kicker %}<p class="kicker">{{ page.kicker }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
+    <p class="byline">By Ebrahim Faizullabhoy <span>·</span> {{ page.date | date: "%B %-d, %Y" }}{% if page.read_time %} <span>·</span> {{ page.read_time }} min read{% endif %}</p>
+  </header>
+  <div class="feature-body">
+    {{ content }}
+  </div>
+  <footer class="feature-foot">
+    <a href="{{ '/#writing' | relative_url }}">← More writing</a>
+  </footer>
+</article>
+
+<footer><div class="wrap">© {{ site.time | date: "%Y" }} Ebrahim Faizullabhoy</div></footer>
+</body>
+</html>

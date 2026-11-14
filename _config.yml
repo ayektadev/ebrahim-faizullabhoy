@@ -12,3 +12,5 @@ defaults:
       layout: post
 exclude:
   - README.md
+
+timezone: America/New_York
