@@ -6,6 +6,7 @@ kicker: "Global Surgery"
 description: "Why surgery has long been the neglected stepchild of global health, and why the way we fund and deliver it has to change."
 read_time: 7
 image: /assets/img/posts/access-waffle.png
+share_image: /assets/img/posts/nurturing-share-card.png
 ---
 
 In 2008, the physicians Paul Farmer and Jim Yong Kim wrote a short essay in the *World Journal of Surgery* with a line that has followed the field ever since. "In Africa," they wrote, "surgery may be thought of as the neglected stepchild of global public health."<sup>1</sup> Farmer later dropped the qualifier and put it more simply: surgery is the neglected stepchild of global health.
