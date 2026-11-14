@@ -1,0 +1,14 @@
+title: Ebrahim Faizullabhoy
+description: Medical student interested in global surgery systems, trauma, and austere medicine.
+baseurl: "/ebrahim-faizullabhoy"
+url: "https://ayektadev.github.io"
+markdown: kramdown
+permalink: /writing/:year/:month/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md

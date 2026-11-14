@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} · Ebrahim Faizullabhoy</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="mark" href="{{ '/' | relative_url }}">Ebrahim Faizullabhoy</a>
+    <ul>
+      <li><a href="{{ '/#writing' | relative_url }}">Writing</a></li>
+      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="post">
+  <a class="back" href="{{ '/#writing' | relative_url }}">← All writing</a>
+  <h1>{{ page.title }}</h1>
+  <p class="date">{{ page.date | date: "%B %-d, %Y" }}</p>
+  <div class="body">{{ content }}</div>
+</article>
+<footer><div class="wrap">© {{ site.time | date: "%Y" }} Ebrahim Faizullabhoy</div></footer>
+</body>
+</html>

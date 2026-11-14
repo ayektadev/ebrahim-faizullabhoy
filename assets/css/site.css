@@ -1,0 +1,113 @@
+:root{
+  --ink:#1f1f1f; --mid:#5b5b5b; --soft:#8a8780; --hair:#e2ded7; --paper:#fbfaf7; --accent:#b8002e;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --sans:"Inter", -apple-system, "Segoe UI", Arial, sans-serif;
+  --w:1040px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:72px}
+body{margin:0; background:var(--paper); color:var(--ink); font:400 17px/1.65 var(--sans); -webkit-font-smoothing:antialiased}
+a{color:inherit; text-decoration-color:rgba(184,0,46,.45); text-underline-offset:3px; text-decoration-thickness:1px}
+a:hover{color:var(--accent)}
+.wrap{max-width:var(--w); margin:0 auto; padding:0 28px}
+p{margin:0 0 1.1em}
+
+/* nav */
+nav{position:sticky; top:0; z-index:5; background:rgba(251,250,247,.93); backdrop-filter:saturate(1.4) blur(8px); border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px}
+.mark{font:500 19px/1 var(--serif); text-decoration:none}
+nav ul{display:flex; gap:26px; list-style:none; margin:0; padding:0; font-size:14.5px; color:var(--mid)}
+nav ul a{text-decoration:none}
+
+/* hero */
+.hero{display:grid; grid-template-columns:1.5fr .8fr; gap:72px; align-items:center; padding:88px 0 80px}
+h1{font:500 clamp(46px,6.2vw,74px)/1.02 var(--serif); letter-spacing:-.015em; margin:0 0 14px}
+.role-line{font-size:16px; color:var(--mid); margin:0 0 28px}
+.lede{font:400 21px/1.55 var(--serif); color:#2c2c2c; margin:0 0 30px; max-width:40ch}
+.actions{display:flex; gap:12px; flex-wrap:wrap}
+.btn{display:inline-block; padding:11px 18px; border:1px solid var(--ink); border-radius:2px; text-decoration:none; font-size:15px; font-weight:500}
+.btn:hover{color:var(--accent); border-color:var(--accent)}
+.btn.solid{background:var(--ink); color:var(--paper)}
+.btn.solid:hover{background:var(--accent); border-color:var(--accent); color:#fff}
+figure.portrait{margin:0; max-width:360px; justify-self:end; width:100%}
+figure.portrait img{display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 30%; border-radius:2px}
+
+/* sections */
+section{padding:76px 0; border-top:1px solid var(--hair)}
+.sec{display:grid; grid-template-columns:200px 1fr; gap:48px}
+.sec > h2{font:500 30px/1.15 var(--serif); margin:0; position:sticky; top:96px; align-self:start}
+.prose{max-width:64ch}
+.prose p{font:400 19px/1.65 var(--serif); color:#2a2a2a}
+h3.sub{font:600 12.5px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--soft); margin:40px 0 14px}
+h3.sub:first-child{margin-top:0}
+
+/* publications */
+.pubs{list-style:none; margin:0; padding:0}
+.pubs li{padding:18px 0; border-bottom:1px solid var(--hair)}
+.pubs li:first-child{border-top:1px solid var(--ink)}
+.pubs .title{font:500 20px/1.35 var(--serif); display:block; margin-bottom:6px}
+.pubs .meta{font-size:14.5px; color:var(--mid)}
+.pubs .meta b{font-weight:600; color:var(--ink)}
+.pubs .doi{font-size:14px; color:var(--soft)}
+.compact{list-style:none; margin:0; padding:0}
+.compact li{padding:10px 0; border-bottom:1px solid var(--hair); font-size:15px; color:var(--mid); display:grid; grid-template-columns:1fr auto; gap:18px}
+.compact li span:last-child{color:var(--soft); white-space:nowrap}
+.compact li:first-child{border-top:1px solid var(--hair)}
+
+/* projects */
+.cards{display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--ink)}
+.cards article{padding:24px 26px 26px 0; border-bottom:1px solid var(--hair)}
+.cards article.feature{grid-column:1/-1; padding:26px 0 30px}
+.cards article.feature h4{font-size:30px}
+.cards article.feature p:last-child{font-size:17px; max-width:64ch; color:#3a3a3a}
+.cards .flag{font:600 12px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 10px}
+.cards article:nth-child(odd):not(.feature){padding-left:26px; border-left:1px solid var(--hair)}
+.cards h4{font:500 23px/1.2 var(--serif); margin:0 0 4px}
+.cards h4 a{text-decoration:none}
+.cards h4 a::after{content:" \2197"; font-size:.7em; color:var(--soft)}
+.cards .role{font-size:13.5px; color:var(--soft); margin:0 0 10px}
+.cards p{font-size:15.5px; color:var(--mid); margin:0}
+
+/* writing */
+.posts{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink)}
+.posts li{padding:18px 0; border-bottom:1px solid var(--hair)}
+.posts a{font:500 21px/1.3 var(--serif); text-decoration:none}
+.posts .date{display:block; font-size:13.5px; color:var(--soft); margin-top:4px}
+.posts p{margin:6px 0 0; color:var(--mid); font-size:15.5px}
+.empty{color:var(--mid); border-top:1px solid var(--ink); padding-top:18px}
+
+/* cv + contact */
+.cv-line{display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; border-top:1px solid var(--ink); padding-top:18px}
+.cv-line p{margin:0; color:var(--mid)}
+.contact-grid{display:grid; grid-template-columns:1.4fr 1fr 1.1fr; border-top:1px solid var(--ink)}
+.contact-grid a{display:block; padding:18px 18px 18px 0; text-decoration:none; border-bottom:1px solid var(--hair)}
+.contact-grid a + a{padding-left:18px; border-left:1px solid var(--hair)}
+.contact-grid small{display:block; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin-bottom:6px}
+.contact-grid span{font:500 16.5px/1.3 var(--serif); overflow-wrap:anywhere}
+.contact-grid a:last-child span{white-space:nowrap}
+footer{padding:40px 0 56px; color:var(--soft); font-size:13.5px}
+
+/* blog post page */
+.post{max-width:680px; margin:0 auto; padding:72px 28px 40px}
+.post .back{font-size:14px; color:var(--mid); text-decoration:none}
+.post h1{font-size:clamp(36px,5vw,52px); margin:28px 0 10px}
+.post .date{color:var(--soft); font-size:14px; margin:0 0 36px}
+.post .body{font:400 19px/1.7 var(--serif); color:#262626}
+.post .body h2{font:500 26px/1.3 var(--serif); margin:1.6em 0 .5em}
+.post .body blockquote{margin:1.4em 0; padding:0 0 0 20px; border-left:2px solid var(--hair); color:var(--mid)}
+.post .body img{max-width:100%; height:auto}
+
+@media (max-width:860px){
+  nav ul{gap:16px; font-size:14px}
+  nav ul li.hide-sm{display:none}
+  .mark{font-size:17px}
+  .hero{grid-template-columns:1fr; gap:32px; padding:44px 0 52px}
+  figure.portrait{max-width:220px; order:-1; justify-self:start}
+  .sec{grid-template-columns:1fr; gap:22px}
+  .sec > h2{position:static}
+  .cards{grid-template-columns:1fr}
+  .cards article:nth-child(odd):not(.feature){padding-left:0; border-left:0}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-grid a + a{padding-left:0; border-left:0}
+  .compact li{grid-template-columns:1fr}
+}
