@@ -10,7 +10,23 @@ layout: null
 <meta name="description" content="Ebrahim Faizullabhoy is a medical student interested in surgery, surgical systems, and global surgery.">
 <meta property="og:title" content="Ebrahim Faizullabhoy">
 <meta property="og:description" content="Medical student interested in surgery, surgical systems, and global surgery.">
-<meta property="og:image" content="assets/img/headshot.jpg">
+<meta property="og:image" content="{{ '/assets/img/headshot.jpg' | absolute_url }}">
+<meta property="og:url" content="{{ '/' | absolute_url }}">
+<meta property="og:type" content="profile">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ '/' | absolute_url }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ebrahim Faizullabhoy",
+  "url": "{{ '/' | absolute_url }}",
+  "image": "{{ '/assets/img/headshot.jpg' | absolute_url }}",
+  "jobTitle": "Medical student",
+  "description": "Medical student interested in surgery, surgical systems, and global surgery.",
+  "sameAs": ["https://orcid.org/0009-0003-8397-0706"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">

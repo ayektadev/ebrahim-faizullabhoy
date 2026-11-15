@@ -3,6 +3,8 @@ description: Medical student interested in global surgery systems, trauma, and a
 baseurl: "/ebrahim-faizullabhoy"
 url: "https://ayektadev.github.io"
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
 permalink: /writing/:year/:month/:title/
 defaults:
   - scope:
@@ -10,6 +12,10 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: "assets/docs"
+    values:
+      sitemap: false
 exclude:
   - README.md
 
