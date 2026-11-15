@@ -16,6 +16,10 @@ defaults:
       path: "assets/docs"
     values:
       sitemap: false
+  - scope:
+      path: "google19bea0bc9453c89d.html"
+    values:
+      sitemap: false
 exclude:
   - README.md
 
