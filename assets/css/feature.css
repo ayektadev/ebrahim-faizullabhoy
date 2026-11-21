@@ -22,6 +22,7 @@
 .feature-body figcaption b{color:var(--ink); font-weight:600}
 .feature-body .span.figure-row{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); align-items:start; max-width:1080px; margin-left:auto; margin-right:auto}
 .feature-body .span figure{margin:0}
+.feature-body figure.span{max-width:960px; margin-left:auto; margin-right:auto}
 
 .pull{column-span:all; margin:30px auto 34px; max-width:860px; text-align:center; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); padding:26px 10px}
 .pull p{font:400 34px/1.25 var(--serif) !important; text-align:center !important; margin:0 0 12px !important; color:var(--ink)}
@@ -45,3 +46,25 @@
   .feature-body .span.figure-row{grid-template-columns:1fr; gap:24px}
   .pull p{font-size:27px !important}
 }
+
+/* mission statement block */
+.feature-body .mission{max-width:900px; margin:30px auto 34px; padding:28px 40px; border:2px solid var(--accent); background:#fff; text-align:center}
+.feature-body .mission p{text-align:center; margin:0 auto; hyphens:none; -webkit-hyphens:none; max-width:46ch; text-wrap:balance}
+.feature-body .mission-label{font:600 15px/1.3 var(--sans); letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:14px!important}
+.feature-body .mission-text{font:400 clamp(20px,1rem + .4vw,23px)/1.5 var(--serif); color:var(--ink)}
+
+/* domains grid */
+.feature-body .domains{display:grid; grid-template-columns:repeat(5,1fr); gap:0; margin:24px 0 32px; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink)}
+.feature-body .domain{padding:22px 22px 24px; border-left:1px solid var(--hair)}
+.feature-body .domain:first-child{border-left:0; padding-left:0}
+.feature-body .dnum{display:block; font:600 15px/1 var(--sans); letter-spacing:.08em; color:var(--accent); margin-bottom:10px}
+.feature-body .domain h3{font:600 15px/1.3 var(--sans); letter-spacing:.08em; text-transform:uppercase; margin:0 0 10px; color:var(--ink)}
+.feature-body .domain p{font-size:inherit; line-height:1.55; text-align:left; margin:0; hyphens:none}
+.feature-body ol{margin:0 0 1em; padding-left:1.3em}
+.feature-body ol li{margin-bottom:.4em}
+.feature-body .domains.tenets{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.feature-body .domains.tenets,.feature-body .domains{grid-template-columns:1fr 1fr}.feature-body .domain{border-left:0; padding-left:0; border-top:1px solid var(--hair)}}
+@media (max-width:600px){.feature-body .domains{grid-template-columns:1fr}.feature-body .mission{padding:22px 18px}}
+.feature-body .domain p + p{margin-top:.8em}
+.feature-body .domain .dmeth{font-size:.88em; color:var(--mid); line-height:1.5}
+.feature-body .domain .dmeth b{font:600 .8em/1 var(--sans); letter-spacing:.08em; text-transform:uppercase; color:var(--ink)}
